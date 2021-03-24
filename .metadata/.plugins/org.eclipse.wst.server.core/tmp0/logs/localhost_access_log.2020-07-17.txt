@@ -1,0 +1,16 @@
+127.0.0.1 - - [17/Jul/2020:02:31:43 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:31:44 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 200 597
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:32:01 +0530] "GET /DEMO_WEB1/Login_servlet?uname=Admin&pwd=krish8 HTTP/1.1" 200 69
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:33:23 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 200 634
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:33:35 +0530] "GET /DEMO_WEB1/Login_servlet?uname=Admin&pwd=Krish8 HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:35:26 +0530] "GET /DEMO_WEB1/Login_servlet?uname=Admin&pwd= HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:35:34 +0530] "GET /DEMO_WEB1/Login_servlet?uname=&pwd= HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:35:44 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:35:47 +0530] "GET /DEMO_WEB1/Login_servlet?uname=&pwd= HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:41:11 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 200 882
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:41:13 +0530] "GET /DEMO_WEB1/Login_servlet?uname=&pwd= HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:43:02 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 200 880
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:45:54 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:02:46:14 +0530] "GET /DEMO_WEB1/Login_servlet?uname=nm%2Cn&pwd=nkjnkn HTTP/1.1" 200 81
+127.0.0.1 - - [17/Jul/2020:12:15:54 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [17/Jul/2020:12:15:59 +0530] "GET /DEMO_WEB1/Login.html HTTP/1.1" 304 -

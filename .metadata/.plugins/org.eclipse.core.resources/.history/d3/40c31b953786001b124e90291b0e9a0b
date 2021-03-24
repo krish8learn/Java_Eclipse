@@ -1,0 +1,93 @@
+package random;
+
+import java.util.HashMap;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.Map.Entry;
+
+public class PrimeVowels2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input1 = 3;
+		int input2 = 5;
+		//primevowel(input1);
+		System.out.println(primevowel(input1));
+		System.out.println(primevowel(input2));
+	}
+	
+	public static String primevowel(int input) {
+		String ret = "";
+		//creating maps of prime number
+		HashMap<Integer,String> primenumber = new HashMap<Integer,String>();
+		
+		//prime number 
+		
+		for (int number=2;number<100;number++) {
+			boolean flag = true;
+			for(int i=2;i<number;i++) {
+				if(number%i==0) {
+					flag = false;
+				}
+			}
+			if (flag == true) {
+				//System.out.println(number);
+				primenumber.put(number, numtoword(number));
+			}
+		}
+		//System.out.println(primenumber.entrySet());
+		TreeMap<Integer,String> tm=new  TreeMap<Integer,String> (primenumber)); 
+		ret = tovowel(tm, input);
+		return ret;
+	}
+	
+	
+	public static String numtoword(int number) {
+		
+		//declaring values of map which would be used
+		String unitsArray[] = { "zero", "one", "two", "three", "four", "five", "six", 
+                "seven", "eight", "nine", "ten", "eleven", "twelve",
+                "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", 
+                "eighteen", "nineteen" };
+		String tensArray[] = { "zero", "ten", "twenty", "thirty", "forty", "fifty",
+                "sixty", "seventy", "eighty", "ninety" };
+
+		String words = "";
+
+		if (number < 20) { 
+			// fetch the appropriate value from unit array
+			words += unitsArray[number];
+		} else { 
+			// fetch the appropriate value from tens array
+			words += tensArray[number / 10]; 
+			if ((number % 10) > 0) {
+				words +=  unitsArray[number % 10];
+			}
+		}
+			//System.out.println(words);
+			return words;
+	}
+
+	public static String tovowel(TreeMap example, int input) {
+	String ret = "";
+	char[] vowels = {'a','e','i','o','u'};
+	int count = 0;
+	Set<Entry<Integer,String>> em =example.entrySet();
+	for(Entry<Integer,String> ss :em)
+	{
+		if(ss.getKey()==input) {
+			char[] ch = ss.getValue().toCharArray();
+			for(int i=0;i<ch.length;i++) {
+				for(int j=0;j<vowels.length;j++) {
+					if(ch[i]==vowels[j]) {
+						count++;
+						ret += ch[i];
+					}
+				}
+			}
+		}
+	}
+	return ret + String.valueOf(count);
+}
+	
+}

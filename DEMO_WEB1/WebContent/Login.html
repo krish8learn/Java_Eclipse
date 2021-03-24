@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DEMO_WEB1</title>
+<style type="text/css">
+div{
+position: absolute;
+top: 10px;
+left: 80px;
+width:300px;
+height:120px;
+border: 2px solid blue;
+border-radius: 20px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function LoginValidation(){
+var userName = document.LoginForm.uname.value;
+var password = document.LoginForm.pwd.value;
+if(userName=="" || password==""){
+alert("Fields Can not be empty");
+return false;
+}
+}
+</script>
+<form action = " Login_servlet " name="LoginForm">
+<div>
+<br>
+<table>
+<tr><td>USER NAME</td><td> <input type ="text" name = "uname"/></td></tr>
+<tr><td>Password</td><td> <input type ="password" name ="pwd"/></td></tr>
+<tr><td colspan = "2" align ="center"><input type = "submit" value = "Login" onClick = "return LoginValidation()"/></td></tr>
+</table>
+</div>
+</form>
+</body>
+</html>
