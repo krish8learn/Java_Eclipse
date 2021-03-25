@@ -1,0 +1,16 @@
+package handson;
+
+public class Student extends Person1{
+	String studentId;
+	
+	public Student(String n, String dob, String sId)
+	{
+		super(n,dob);
+		studentId= sId;
+	}
+	
+	public String details()
+	{
+		return "Student[super:"+super.details()+",studentid="+studentId+"]";
+	}
+}
